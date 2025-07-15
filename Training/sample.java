@@ -1,4 +1,5 @@
 package Training;
+
 import java.util.Scanner;
 
 public class sample {
@@ -45,12 +46,33 @@ public class sample {
         a=a - b;
         System.out.println("After swapping: a = " + a + ", b = " + b);
     }
+
+    public void voting(){
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        int n = sc.nextInt();
+        System.out.print((n>0)?"a is positve":(n<0)?"a is negative":"a is zero");
+        }
+
+        public void xor(){
+        
+        int a = 10, b = 20;
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+        a=a^b;
+        b=a^b;
+        a=a^b;
+        System.out.println("After swapping: a = " + a + ", b = " +b);
+        }
+    
     public static void main(String[] args){
         sample obj = new sample();
         // obj.method(10,7,1426,625,28,14,32);
-        obj.method2();
+        // obj.method2();
         // obj.swapping();
         // obj.swapping2();
+        // obj.voting();
+        obj.xor();
         
     }
 }
